@@ -86,19 +86,69 @@ movie_new = Movie.new
 movie_new["name"] = "Batman Begins"
 movie_new["year_released"] = 2005
 movie_new["rated"] = "PG-13"
-movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
+movie_new["studio_id"] = Studio.find_by({"name" => "Warner Bros."})
+movie_new.save
 
 movie_new = Movie.new
 movie_new["name"] = "The Dark Knight"
 movie_new["year_released"] = 2008
 movie_new["rated"] = "PG-13"
-movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
+movie_new["studio_id"] = Studio.find_by({"name" => "Warner Bros."})
+movie_new.save
 
 movie_new = Movie.new
 movie_new["name"] = "The Dark Knight Rises"
 movie_new["year_released"] = 2012
 movie_new["rated"] = "PG-13"
-movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
+movie_new["studio_id"] = Studio.find_by({"name" => "Warner Bros."})
+movie_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Christian Bale"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Michael Caine"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Liam Neeson"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Katie Holmes"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Gary Oldman"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Heath Ledger"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Aaron Eckhart"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Maggie Gyllenhaal"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Tom Hardy"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Joseph Gordon-Levitt"
+actor_new.save
+
+actor_new = Actor.new
+actor_new["name"] = "Anne Hathaway"
+actor_new.save
+
+role_new = Role.new
+role_new["movie_id"] = Movie.find_by({"name"})
 
 # Prints a header for the movies output
 puts "Movies"
