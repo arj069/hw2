@@ -70,6 +70,7 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Model.destory_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
@@ -77,6 +78,27 @@
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+warner = Studio.new
+warner["name"] = "Warner Bros."
+
+movie_new = Movie.new
+movie_new["name"] = "Batman Begins"
+movie_new["year_released"] = 2005
+movie_new["rated"] = "PG-13"
+movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
+
+movie_new = Movie.new
+movie_new["name"] = "The Dark Knight"
+movie_new["year_released"] = 2008
+movie_new["rated"] = "PG-13"
+movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
+
+movie_new = Movie.new
+movie_new["name"] = "The Dark Knight Rises"
+movie_new["year_released"] = 2012
+movie_new["rated"] = "PG-13"
+movie_new["studio_id"] = Studio.where({"name" => "Warner Bros."})
 
 # Prints a header for the movies output
 puts "Movies"
